@@ -1,0 +1,11 @@
+[run]
+source = ./science/apps
+omit =
+    */__pycache__/*
+    */migrations/*
+    */__init__.py
+    */manage.py
+    */tests/*
+
+[html]
+directory = coverage

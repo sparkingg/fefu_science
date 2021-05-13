@@ -1,0 +1,67 @@
+{% extends 'django_tables2/bootstrap4.html' %}
+
+{% load django_tables2 %}
+{% load static %}
+
+{% block table.thead %}
+{% if table.show_header %}
+<thead {{ table.attrs.thead.as_html }}>
+    <tr>
+        {% for column in table.columns %}
+        <th {{ column.attrs.th.as_html }}>
+            {% if column.orderable %}
+            <a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">
+                {{ column.header }}
+                <svg class="bi bi-arrow-up-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M11 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M10.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L11 3.707 8.354 6.354a.5.5 0 11-.708-.708l3-3zm-9 7a.5.5 0 01.708 0L5 12.293l2.646-2.647a.5.5 0 11.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M5 2.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V3a.5.5 0 01.5-.5z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            {% else %}
+            {{ column.header }}
+            {% endif %}
+        </th>
+        {% endfor %}
+    </tr>
+</thead>
+{% endif %}
+{% endblock table.thead %}
+
+{% block pagination %}
+{% if table.page and table.paginator.num_pages > 1 %}
+<nav aria-label="Table navigation">
+    <ul class="pagination justify-content-center">
+        {% if table.page.has_previous %}
+        {% block pagination.previous %}
+        <li class="previous page-item">
+            <a href="{% querystring table.prefixed_page_field=table.page.previous_page_number %}" class="page-link">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endblock pagination.previous %}
+        {% endif %}
+        {% if table.page.has_previous or table.page.has_next %}
+        {% block pagination.range %}
+        {% for p in table.page|table_page_range:table.paginator %}
+        <li class="page-item{% if table.page.number == p %} active{% endif %}">
+            <a class="page-link" {% if p != '...' %}href="{% querystring table.prefixed_page_field=p %}" {% endif %}>
+                {{ p }}
+            </a>
+        </li>
+        {% endfor %}
+        {% endblock pagination.range %}
+        {% endif %}
+        {% if table.page.has_next %}
+        {% block pagination.next %}
+        <li class="next page-item">
+            <a href="{% querystring table.prefixed_page_field=table.page.next_page_number %}" class="page-link">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endblock pagination.next %}
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock pagination %}

@@ -1,0 +1,30 @@
+{% extends 'common/table.html' %}
+
+{% block extra_toolbar %}
+<button class="create-contest btn btn-sm btn-primary" type="button" name="button">
+    <span data-feather="plus"></span>
+    Добавить
+</button>
+{% endblock extra_toolbar %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".create-contest").modalForm({
+            formURL: "{% url 'contests-contest-create' %}"
+        });
+
+        $(".read-contest").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".update-contest").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".delete-contest").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+    });
+</script>
+{% endblock extra_scripts %}

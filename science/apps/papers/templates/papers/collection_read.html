@@ -1,0 +1,29 @@
+{% extends 'common/modals/read.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Read Collection" %}{% endblock title %}
+
+{% block body %}
+<dl>
+    <dt>{% trans "Description" %}</dt>
+    <dd>{{ collection.description }}</dd>
+
+    <dt>{% trans "Publisher" %}</dt>
+    <dd>{{ collection.publisher }}</dd>
+
+    <dt>{% trans "ISBN" %}</dt>
+    <dd>{{ collection.isbn }}</dd>
+
+    <dt>{% trans "Edition" %}</dt>
+    <dd>{{ collection.edition }}</dd>
+
+    <dt>{% trans "Volume" %}</dt>
+    <dd>{{ collection.volume }}</dd>
+
+    <dt>{% trans "Volume (Full-time university employees)" %}</dt>
+    <dd>{{ collection.volume_employees }}</dd>
+
+    <dt>{% trans "Date Added" %}</dt>
+    <dd>{{ collection.date_added }}</dd>
+</dl>
+{% endblock body %}

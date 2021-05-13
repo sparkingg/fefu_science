@@ -1,0 +1,16 @@
+{% extends 'common/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'accounts/styles/authentication.css' %}">
+{% endblock styles %}
+
+{% block scaffold %}
+<div class="card mx-auto text-center">
+    <div class="card-body">
+        <h5 class="card-title">{% trans "You have been logged out" %}</h5>
+        <a href="{% url 'accounts-login' %}" class="btn btn-sm btn-outline-primary">{% trans "Log back in" %}</a>
+    </div>
+</div>
+{% endblock %}

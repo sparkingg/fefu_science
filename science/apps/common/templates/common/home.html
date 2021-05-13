@@ -1,0 +1,234 @@
+{% extends 'common/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block scaffold %}
+<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+    <a href="{% url 'common-home' %}" class="navbar-brand">Наука</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-stretch" id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <span class="navbar-text">
+                {{ user.email }}
+            </span>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts-logout' %}">
+                    <span data-feather="log-out"></span>
+                    Выйти
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-2">
+        <h1 class="h2">
+            {{ title }}
+        </h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            {% if request.path != "/" %}
+            <a class="btn btn-sm btn-outline-primary mr-1" href="{% url 'common-home' %}">
+                <span data-feather="chevron-left"></span>
+            </a>
+            {% endif %}
+            {% block toolbar %}{% endblock toolbar %}
+        </div>
+    </div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Название формы</th>
+                <th scope="col">Номер формы</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Направления научных исследований ДВФУ</td>
+                <td>1</td>
+                <td><a href="{% url 'research-research-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Сведения о наиболее значимых результатах научных исследований и разработок</td>
+                <td>2</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Проекты, поданные сотрудниками ДВФУ на конкурсы в отчетном году</td>
+                <td>3</td>
+                <td><a href="{% url 'contests-contest-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Гранты зарубежных фондов, полученные ДВФУ в отчетном году</td>
+                <td>4_1</td>
+                <td><a href="{% url 'grants-grant-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Проекты Программы повышения конкурентноспособности ДВФУ</td>
+                <td>4_2</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Поддержка исследовательской деятельности студентов, аспирантов, молодых ученых ДВФУ в отчетном году
+                </td>
+                <td>4_3</td>
+                <td><a href="{% url 'scholarships-scholarship-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Монографии</td>
+                <td>5_1</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Учебники</td>
+                <td>5_2(0)</td>
+                <td><a href="{% url 'textbooks-textbook-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Учебные пособия</td>
+                <td>5_2(1)</td>
+                <td><a href="{% url 'textbooks-manual-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Учебно-методические пособия</td>
+                <td>5_2(2)</td>
+                <td><a href="{% url 'textbooks-guide-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Сборники научных трудов</td>
+                <td>5_3</td>
+                <td><a href="{% url 'papers-collection-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Научные статьи</td>
+                <td>5_4</td>
+                <td><a href="{% url 'articles-article-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Материалы конференций, симпозиумов</td>
+                <td>5_5</td>
+                <td><a href="{% url 'conferences-conference-table' %}" class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Научно-популярные публикации</td>
+                <td>5_6</td>
+                <td><a href="{% url 'popular-science-publication-table' %}" class="btn btn-primary btn-sm">Открыть</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Авторефераты диссертаций</td>
+                <td>5_7</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Проведение научных мероприятий в отчетном году</td>
+                <td>6</td>
+                <td><a href={% url 'activities-activity-table' %} class="btn btn-primary btn-sm">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Планируемые научные и научно-технические мероприятия ДВФУ</td>
+                <td>6_1</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Конгрессно-выставочная деятельность в отчетном году</td>
+                <td>7</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Защиты диссертаций</td>
+                <td>8</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Участие в международных научных и образовательных программах в отчетном году</td>
+                <td>9_1</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Зарубежные научные командировки в отчетном году</td>
+                <td>9_2</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Приглашение зарубежных исследователей и преподавателей в ДВФУ в отчетном году</td>
+                <td>9_3</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Международные и национальные премии и награды</td>
+                <td>10</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Участие в научных мероприятиях с докладами в отчетном году</td>
+                <td>11</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Организация научно-исследовательской деятельности обучающихся и их участие в научных исследованиях и
+                    разработках</td>
+                <td>12</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+
+            <tr>
+                <td>Результативность научно-исследовательской деятельности обучающихся в отчетном году</td>
+                <td>13</td>
+                <td><a href="#" class="btn btn-primary btn-sm disabled">Открыть</a></td>
+            </tr>
+        </tbody>
+    </table>
+    {% endblock content %}
+</main>
+{% endblock scaffold %}
+
+{% block extra_scripts %}{% endblock extra_scripts %}

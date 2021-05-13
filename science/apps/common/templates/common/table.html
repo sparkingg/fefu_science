@@ -1,0 +1,30 @@
+{% extends 'common/home.html' %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+{% load export_url from django_tables2 %}
+
+{% block toolbar %}
+<div class="dropdown">
+    <button class="btn btn-sm btn-outline-primary mr-1 dropdown-toggle" type="button" id="dropdownExport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span data-feather="download"></span>
+        Экспорт
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownExport">
+        <a class="dropdown-item btn btn-sm btn-outline-primary mr-1" href="{% export_url 'xls' %}">
+            <span data-feather="file-text"></span>
+            Excel
+        </a>
+        <a class="dropdown-item btn btn-sm btn-outline-primary mr-1" href="{% export_url 'csv' %}">
+            <span data-feather="file"></span>
+            CSV
+        </a>
+    </div>
+</div>
+{% block extra_toolbar %}{% endblock %}
+{% endblock toolbar %}
+
+{% block content %}
+<div class="table-responsive">
+    {% render_table table %}
+</div>
+{% endblock content %}

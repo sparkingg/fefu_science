@@ -1,0 +1,32 @@
+{% extends 'common/table.html' %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+
+{% block extra_toolbar %}
+<button class="create-publication btn btn-sm btn-primary" type="button" name="button">
+    <span data-feather="plus"></span>
+    Добавить
+</button>
+{% endblock extra_toolbar %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".create-publication").modalForm({
+            formURL: "{% url 'popular-science-publication-create' %}"
+        });
+
+        $(".read-publication").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".update-publication").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".delete-publication").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+    });
+</script>
+{% endblock extra_scripts %}

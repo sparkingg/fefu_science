@@ -1,0 +1,656 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-09 04:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: science/apps/accounts/admin.py:42
+msgid "Permissions"
+msgstr "Права доступа"
+
+#: science/apps/accounts/apps.py:7 science/apps/accounts/tests/test_apps.py:12
+msgid "Accounts"
+msgstr "Аккаунты"
+
+#: science/apps/accounts/forms.py:33 science/apps/accounts/managers.py:20
+msgid "Email address must be a university email."
+msgstr ""
+"Адрес электронной почты должен быть корпоративным адресом университета."
+
+#: science/apps/accounts/forms.py:40
+msgid "Enter a correct email and password. Both fields may be case-sensitive."
+msgstr ""
+"Введите корректный адрес электронной почты и пароль. Оба поля могут быть "
+"чувствительны к регистру."
+
+#: science/apps/accounts/forms.py:42
+msgid "This account is inactive."
+msgstr "Этот аккаунт деактивирован."
+
+#: science/apps/accounts/managers.py:18
+msgid "Email address is required."
+msgstr "Адрес электронной почты обязателен."
+
+#: science/apps/accounts/managers.py:37
+msgid "Superuser must have `is_staff=True`."
+msgstr "Суперпользователь должен иметь `is_staff=True`."
+
+#: science/apps/accounts/managers.py:39
+msgid "Superuser must have `is_superuser=True`."
+msgstr "Суперпользователь должен иметь `is_superuser=True`."
+
+#: science/apps/accounts/models.py:15
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: science/apps/accounts/models.py:16
+msgid "First Name"
+msgstr "Имя"
+
+#: science/apps/accounts/models.py:17
+msgid "Patronimic Name"
+msgstr "Отчество"
+
+#: science/apps/accounts/models.py:18
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: science/apps/accounts/models.py:22 science/apps/common/models.py:22
+msgid "Department"
+msgstr "Кафедра"
+
+#: science/apps/accounts/models.py:28
+msgid "Staff Status"
+msgstr "Персонал"
+
+#: science/apps/accounts/models.py:30
+msgid "Designates whether the user can log into this admin site."
+msgstr "Указывает, может ли пользователь войти на этот сайт администратора."
+
+#: science/apps/accounts/models.py:33
+msgid "Active Status"
+msgstr "Активен"
+
+#: science/apps/accounts/models.py:35
+msgid "Designates whether this user should be treated as active."
+msgstr "Указывает, следует ли считать этого пользователя активным."
+
+#: science/apps/accounts/models.py:37
+msgid "Date Joined"
+msgstr "Дата регистрации"
+
+#: science/apps/accounts/models.py:48
+msgid "User"
+msgstr "Пользователь"
+
+#: science/apps/accounts/models.py:49
+msgid "Users"
+msgstr "Пользователи"
+
+#: science/apps/accounts/templates/accounts/login.html:25
+#: science/apps/common/templates/common/base.html:14
+#: science/apps/common/templates/common/base.html:16
+#: science/apps/common/templates/common/dashboard.html:12
+msgid "Science"
+msgstr "Наука"
+
+#: science/apps/accounts/templates/accounts/login.html:50
+msgid "Log In"
+msgstr "Войти"
+
+#: science/apps/accounts/templates/accounts/logout.html:12
+msgid "You have been logged out"
+msgstr "Вы вышли"
+
+#: science/apps/accounts/templates/accounts/logout.html:13
+msgid "Log back in"
+msgstr "Войти обратно"
+
+#: science/apps/articles/apps.py:7 science/apps/articles/models.py:81
+#: science/apps/articles/views.py:23
+#: science/apps/common/templates/common/dashboard.html:35
+msgid "Articles"
+msgstr "Статьи"
+
+#: science/apps/articles/filters.py:9 science/apps/articles/models.py:25
+#: science/apps/articles/templates/articles/article_read.html:8
+#: science/apps/conferences/models.py:17
+#: science/apps/conferences/templates/conferences/conference_read.html:8
+#: science/apps/papers/models.py:9
+#: science/apps/papers/templates/papers/collection_read.html:8
+msgid "Description"
+msgstr "Описание"
+
+#: science/apps/articles/filters.py:12 science/apps/articles/models.py:14
+#: science/apps/articles/models.py:28
+#: science/apps/articles/templates/articles/article_read.html:11
+msgid "Publication Type"
+msgstr "Тип публикации"
+
+#: science/apps/articles/filters.py:16
+msgid "From"
+msgstr "От"
+
+#: science/apps/articles/filters.py:20
+msgid "To"
+msgstr "До"
+
+#: science/apps/articles/filters.py:23 science/apps/articles/tables.py:12
+msgid "Authors"
+msgstr "Авторы"
+
+#: science/apps/articles/filters.py:34 science/apps/articles/models.py:20
+#: science/apps/articles/models.py:56
+#: science/apps/articles/templates/articles/article_read.html:37
+msgid "Bibliographic Database"
+msgstr "Библиографическая база данных"
+
+#: science/apps/articles/forms/error_messages.py:3
+#, python-format
+msgid "Author %(nth)s does not conform to the format."
+msgstr "Автор %(nth)s не соответсвует формату."
+
+#: science/apps/articles/forms/forms.py:35
+msgid "Authors must be specified."
+msgstr "Авторы должны быть указаны."
+
+#: science/apps/articles/forms/help_texts.py:4
+msgid ""
+"List authors according to the format of \"Last Name FN.[MN.].\" separated by "
+"commas."
+msgstr ""
+"Перечислите авторов в соответствии с форматом \"Фамилия И.[О.]\" через "
+"запятую."
+
+#: science/apps/articles/forms/help_texts.py:8
+msgid "Enter a description of the publication without authors."
+msgstr "Введите библиографическое описание публикации не включающее авторов."
+
+#: science/apps/articles/forms/help_texts.py:14
+msgid ""
+"Select a bibliographic databases that contain a reference to the "
+"publication. Hold CTRL (Windows) or CMD (Mac) to select several."
+msgstr ""
+"Выберите библиографическую базу данных, которая содержит ссылку на "
+"публикацию. Удерживайте CTRL (Windows) или CMD (Mac), чтобы выбрать "
+"несколько."
+
+#: science/apps/articles/models.py:15
+msgid "Publication Types"
+msgstr "Типы публикации"
+
+#: science/apps/articles/models.py:21
+msgid "Bibliographic Databases"
+msgstr "Библиографические базы данных"
+
+#: science/apps/articles/models.py:32
+#: science/apps/articles/templates/articles/article_read.html:14
+#: science/apps/articles/templates/articles/article_table.html:30
+msgid "Impact Factor"
+msgstr "Импакт-фактор"
+
+#: science/apps/articles/models.py:39
+#: science/apps/articles/templates/articles/article_read.html:18
+#: science/apps/conferences/models.py:20
+#: science/apps/conferences/templates/conferences/conference_read.html:12
+msgid "Employee Authors"
+msgstr "Авторы (сотрудники)"
+
+#: science/apps/articles/models.py:43
+#: science/apps/articles/templates/articles/article_read.html:23
+#: science/apps/conferences/models.py:24
+#: science/apps/conferences/templates/conferences/conference_read.html:17
+msgid "Foreign Authors"
+msgstr "Авторы (иностранцы)"
+
+#: science/apps/articles/models.py:47
+#: science/apps/articles/templates/articles/article_read.html:28
+#: science/apps/conferences/models.py:28
+#: science/apps/conferences/templates/conferences/conference_read.html:22
+msgid "Postgraduate Authors"
+msgstr "Авторы (аспиранты, докторанты)"
+
+#: science/apps/articles/models.py:51
+#: science/apps/articles/templates/articles/article_read.html:33
+#: science/apps/conferences/models.py:32
+#: science/apps/conferences/templates/conferences/conference_read.html:27
+msgid "Student Authors"
+msgstr "Авторы (студенты)"
+
+#: science/apps/articles/models.py:60
+#: science/apps/articles/templates/articles/article_read.html:40
+msgid "Link to Publication"
+msgstr "Ссылка на публикацию"
+
+#: science/apps/articles/models.py:80
+msgid "Article"
+msgstr "Статья"
+
+#: science/apps/articles/tables.py:62
+msgid "No articles have been added yet."
+msgstr "Статьи еще не добавлены."
+
+#: science/apps/articles/templates/articles/article_create.html:4
+msgid "Create Article"
+msgstr "Добавление статьи"
+
+#: science/apps/articles/templates/articles/article_delete.html:4
+msgid "Delete Article"
+msgstr "Удаление статьи"
+
+#: science/apps/articles/templates/articles/article_delete.html:7
+msgid "Are you sure you want to delete this article?"
+msgstr "Вы уверены, что хотите удалить эту статью?"
+
+#: science/apps/articles/templates/articles/article_read.html:4
+#: science/apps/conferences/templates/conferences/conference_read.html:4
+msgid "Read Article"
+msgstr "Просмотр статьи"
+
+#: science/apps/articles/templates/articles/article_read.html:43
+#: science/apps/conferences/templates/conferences/conference_read.html:34
+#: science/apps/contests/templates/contests/contest_read.html:25
+#: science/apps/papers/templates/papers/collection_read.html:26
+#: science/apps/research/templates/research/research_read.html:35
+msgid "Date Added"
+msgstr "Дата добавления"
+
+#: science/apps/articles/templates/articles/article_table.html:10
+#: science/apps/conferences/templates/conferences/conference_table.html:8
+#: science/apps/contests/templates/contests/contest_table.html:8
+#: science/apps/papers/templates/papers/collection_table.html:8
+#: science/apps/research/templates/research/research_table.html:8
+msgid "Add"
+msgstr "Добавить"
+
+#: science/apps/articles/templates/articles/article_table.html:47
+msgid "Filter"
+msgstr "Фильтровать"
+
+#: science/apps/articles/templates/articles/article_table.html:52
+msgid "Reset"
+msgstr "Сбросить"
+
+#: science/apps/articles/templates/articles/article_update.html:4
+msgid "Update Article"
+msgstr "Обновление статьи"
+
+#: science/apps/articles/views.py:30
+msgid "Article was created."
+msgstr "Статья добавлена."
+
+#: science/apps/articles/views.py:43
+msgid "Article was updated."
+msgstr "Статья обновлена."
+
+#: science/apps/articles/views.py:50
+msgid "Article was deleted."
+msgstr "Статья удалена."
+
+#: science/apps/common/apps.py:7
+msgid "Common"
+msgstr "Общее"
+
+#: science/apps/common/models.py:9 science/apps/research/models.py:23
+#: science/apps/research/models.py:27 science/apps/research/models.py:31
+#: science/apps/research/models.py:35 science/apps/research/models.py:39
+#: science/apps/research/models.py:43 science/apps/research/models.py:47
+#: science/apps/research/templates/research/research_read.html:8
+msgid "Name"
+msgstr "Имя"
+
+#: science/apps/common/models.py:23
+msgid "Departments"
+msgstr "Кафедры"
+
+#: science/apps/common/templates/common/dashboard.html:17
+msgid "Logout"
+msgstr "Выйти"
+
+#: science/apps/common/templates/common/dashboard.html:31
+#: science/apps/common/views.py:6
+msgid "Dashboard"
+msgstr "Главная"
+
+#: science/apps/common/templates/common/dashboard.html:44
+#: science/apps/contests/views.py:23
+msgid "Contests"
+msgstr "Конкурсы"
+
+#: science/apps/common/templates/common/dashboard.html:48
+#: science/apps/papers/models.py:44 science/apps/papers/views.py:23
+msgid "Collections"
+msgstr "Сборники"
+
+#: science/apps/common/templates/common/dashboard.html:52
+#: science/apps/conferences/models.py:44 science/apps/conferences/views.py:22
+msgid "Conferences"
+msgstr "Конференции"
+
+#: science/apps/common/templates/common/modals/create.html:11
+#: science/apps/common/templates/common/modals/create.html:67
+msgid "Create"
+msgstr "Добавить"
+
+#: science/apps/common/templates/common/modals/delete.html:5
+#: science/apps/common/templates/common/modals/delete.html:13
+msgid "Delete"
+msgstr "Удалить"
+
+#: science/apps/common/templates/common/modals/delete.html:9
+msgid "Are you sure you want to proceed?"
+msgstr "Вы уверены, что хотите продолжить?"
+
+#: science/apps/common/templates/common/modals/read.html:5
+msgid "Read"
+msgstr "Просмотреть"
+
+#: science/apps/common/templates/common/modals/update.html:5
+#: science/apps/common/templates/common/modals/update.html:10
+msgid "Update"
+msgstr "Обновить"
+
+#: science/apps/conferences/models.py:12 science/apps/conferences/models.py:38
+#: science/apps/conferences/templates/conferences/conference_read.html:31
+msgid "Conference Type"
+msgstr "Тип конференции"
+
+#: science/apps/conferences/models.py:13
+msgid "Conference Types"
+msgstr "Типы конференций"
+
+#: science/apps/conferences/models.py:43
+msgid "Conference"
+msgstr "Конференция"
+
+#: science/apps/conferences/tables.py:12
+msgid "No conferences have been added yet."
+msgstr "Конференции еще не добавлены."
+
+#: science/apps/conferences/templates/conferences/conference_create.html:4
+msgid "Create Conference"
+msgstr "Создать конференцию"
+
+#: science/apps/conferences/templates/conferences/conference_delete.html:4
+msgid "Delete Conference"
+msgstr "Удалить конференцию"
+
+#: science/apps/conferences/templates/conferences/conference_delete.html:7
+msgid "Are you sure you want to delete this conference?"
+msgstr "Вы уверены, что хотите удалить эту конференцию?"
+
+#: science/apps/conferences/templates/conferences/conference_update.html:4
+msgid "Update Conference"
+msgstr "Обновить конференцию"
+
+#: science/apps/conferences/views.py:28
+msgid "Conference was created."
+msgstr "Конференция добавлена."
+
+#: science/apps/conferences/views.py:41
+msgid "Conference was updated."
+msgstr "Конференция обновлена."
+
+#: science/apps/conferences/views.py:48
+msgid "Conference was deleted."
+msgstr "Конференция удалена."
+
+#: science/apps/contests/models.py:8
+#: science/apps/contests/templates/contests/contest_read.html:8
+msgid "Fond Name"
+msgstr "Название фонда"
+
+#: science/apps/contests/models.py:10
+#: science/apps/contests/templates/contests/contest_read.html:12
+msgid "Program Name"
+msgstr "Название программы"
+
+#: science/apps/contests/models.py:12
+#: science/apps/contests/templates/contests/contest_read.html:16
+msgid "Contest Name"
+msgstr "Название конкурса"
+
+#: science/apps/contests/models.py:14
+#: science/apps/contests/templates/contests/contest_read.html:19
+msgid "Project Name"
+msgstr "Название проекта"
+
+#: science/apps/contests/models.py:16
+#: science/apps/contests/templates/contests/contest_read.html:22
+msgid "Project Manager"
+msgstr "Руководитель проекта"
+
+#: science/apps/contests/tables.py:13
+msgid "No contests have been added yet."
+msgstr "Конкурсы еще не добавлены."
+
+#: science/apps/contests/templates/contests/contest_create.html:4
+#: science/apps/research/templates/research/research_create.html:4
+msgid "Create Research"
+msgstr "Создать исследование"
+
+#: science/apps/contests/templates/contests/contest_delete.html:4
+#: science/apps/papers/templates/papers/collection_delete.html:4
+msgid "Delete Contest"
+msgstr "Удаление конкурса"
+
+#: science/apps/contests/templates/contests/contest_delete.html:7
+msgid "Are you sure you want to delete this contest?"
+msgstr "Вы уверены, что хотите удалить этот конкурс?"
+
+#: science/apps/contests/templates/contests/contest_read.html:4
+msgid "Read Contest"
+msgstr "Просмотр конкурса"
+
+#: science/apps/contests/templates/contests/contest_update.html:4
+msgid "Update Contest"
+msgstr "Обновление конкурса"
+
+#: science/apps/contests/views.py:29
+msgid "Contest was created."
+msgstr "Конкурс добавлен."
+
+#: science/apps/contests/views.py:42
+msgid "Contest was updated."
+msgstr "Конкурс обновлен."
+
+#: science/apps/contests/views.py:49
+msgid "Contest was deleted."
+msgstr "Конкурс удален."
+
+#: science/apps/papers/models.py:11
+#: science/apps/papers/templates/papers/collection_read.html:11
+msgid "Publisher"
+msgstr "Издатель"
+
+#: science/apps/papers/models.py:14
+#: science/apps/papers/templates/papers/collection_read.html:14
+msgid "ISBN"
+msgstr ""
+
+#: science/apps/papers/models.py:23
+#: science/apps/papers/templates/papers/collection_read.html:17
+msgid "Edition"
+msgstr "Тираж"
+
+#: science/apps/papers/models.py:26
+#: science/apps/papers/templates/papers/collection_read.html:20
+msgid "Volume"
+msgstr "Объем"
+
+#: science/apps/papers/models.py:30
+#: science/apps/papers/templates/papers/collection_read.html:23
+msgid "Volume (Full-time university employees)"
+msgstr "Объем (выполненный штатными преподавателями)"
+
+#: science/apps/papers/models.py:43
+msgid "Collection"
+msgstr "Сборник"
+
+#: science/apps/papers/tables.py:13
+msgid "No collections have been added yet."
+msgstr "Сборники еще не добавлены."
+
+#: science/apps/papers/templates/papers/collection_create.html:4
+msgid "Create Collection"
+msgstr "Создать сборник"
+
+#: science/apps/papers/templates/papers/collection_delete.html:7
+msgid "Are you sure you want to delete this collection?"
+msgstr "Вы уверены, что хотите удалить этот сборник?"
+
+#: science/apps/papers/templates/papers/collection_read.html:4
+msgid "Read Collection"
+msgstr "Просмотр сборника"
+
+#: science/apps/papers/templates/papers/collection_update.html:4
+msgid "Update Collection"
+msgstr "Обновление сборника"
+
+#: science/apps/papers/views.py:29
+msgid "Collection was created."
+msgstr "Сборник добавлен."
+
+#: science/apps/papers/views.py:42
+msgid "Collection was updated."
+msgstr "Сборник обновлен."
+
+#: science/apps/papers/views.py:49
+msgid "Collection was deleted."
+msgstr "Сборник удален."
+
+#: science/apps/research/models.py:18
+msgid "Code"
+msgstr "Код"
+
+#: science/apps/research/models.py:52
+#: science/apps/research/templates/research/research_read.html:11
+msgid "University Priority"
+msgstr ""
+"Наименование приоритетного направления в рамках Программы развития ДВФУ и "
+"Программы повышения конкурентоспособности Дальневосточного федерального "
+"университета среди ведущих мировых научно-образовательных центров на 2013–"
+"2020 гг."
+
+#: science/apps/research/models.py:58
+#: science/apps/research/templates/research/research_read.html:14
+msgid "Scientific Priority"
+msgstr ""
+"Наименование приоритетного направления развития науки, технологий и техники "
+"РФ"
+
+#: science/apps/research/models.py:64
+#: science/apps/research/templates/research/research_read.html:17
+msgid "Critical Technology"
+msgstr "Наименование критической технологии РФ"
+
+#: science/apps/research/models.py:68
+#: science/apps/research/templates/research/research_read.html:20
+msgid "Economic Priority"
+msgstr ""
+"Наименование приоритетного направления модернизации и технологического "
+"развития экономики России"
+
+#: science/apps/research/models.py:74
+#: science/apps/research/templates/research/research_read.html:23
+msgid "Strategic Direction"
+msgstr ""
+"Наименование направления, определенного в Стратегии научно-технологического "
+"развития Российской Федерации"
+
+#: science/apps/research/models.py:78
+msgid "CSCSTI"
+msgstr "Код рубрики ГРНТИ"
+
+#: science/apps/research/models.py:81
+#: science/apps/research/templates/research/research_read.html:29
+msgid "Academic Advisor"
+msgstr "Руководитель"
+
+#: science/apps/research/models.py:83
+#: science/apps/research/templates/research/research_read.html:32
+msgid "Reason"
+msgstr "Основание для выполнения"
+
+#: science/apps/research/models.py:92 science/apps/research/models.py:93
+#: science/apps/research/views.py:22
+msgid "Research"
+msgid_plural "Research"
+msgstr[0] "Исследование"
+msgstr[1] "Исследования"
+msgstr[2] "Исследования"
+msgstr[3] "Исследования"
+
+#: science/apps/research/tables.py:13
+msgid "No research have been added yet."
+msgstr "Исследования еще не добавлены."
+
+#: science/apps/research/templates/research/research_delete.html:4
+msgid "Delete Research"
+msgstr "Удалить исследование"
+
+#: science/apps/research/templates/research/research_delete.html:7
+msgid "Are you sure you want to delete this research?"
+msgstr "Вы уверены, что хотите удалить это исследование?"
+
+#: science/apps/research/templates/research/research_read.html:4
+msgid "Read Research"
+msgstr "Просмотреть исследование"
+
+#: science/apps/research/templates/research/research_read.html:26
+msgid "Category"
+msgstr "Категория"
+
+#: science/apps/research/templates/research/research_update.html:4
+msgid "Update Research"
+msgstr "Обновить исследование"
+
+#: science/apps/research/views.py:28
+msgid "Research was created."
+msgstr "Исследование добавлено."
+
+#: science/apps/research/views.py:41
+msgid "Research was updated."
+msgstr "Исследование обновлено."
+
+#: science/apps/research/views.py:48
+msgid "Research was deleted."
+msgstr "Исследование удалено."
+
+#: science/science/settings.py:135
+msgid "English"
+msgstr "Английский"
+
+#: science/science/settings.py:136
+msgid "Russian"
+msgstr "Русский"
+
+#~ msgid "Economical Priority"
+#~ msgstr ""
+#~ "Наименование приоритетного направления модернизации и технологического "
+#~ "развития экономики России"
+
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgid "School"
+#~ msgstr "Школа"
+
+#~ msgid "Schools"
+#~ msgstr "Школы"

@@ -1,0 +1,46 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.name }}</dt>
+    <dd>{{ activity.name }}</dd>
+
+    {% if activity.program %}
+    <dt>{{ fields.activity_date }}</dt>
+    <dd>{{ activity.activity_date }}</dd>
+    {% endif %}
+
+    <dt>{{ fields.participants }}</dt>
+    <dd>{{ activity.participants }}</dd>
+
+    <dt>{{ fields.participants_university }}</dt>
+    <dd>{{ activity.participants_university }}</dd>
+
+    <dt>{{ fields.participants_foreign }}</dt>
+    <dd>{{ activity.participants_foreign }}</dd>
+
+    <dt>{{ fields.participans_country }}</dt>
+    <dd>{{ activity.participans_country }}</dd>
+
+    <dt>{{ fields.financing_source }}</dt>
+    <dd>{{ activity.financing_source }}</dd>
+
+    <dt>{{ fields.financing_amount }}</dt>
+    <dd>{{ activity.financing_amount }}</dd>
+
+    <dt>{{ fields.bibliographic_description }}</dt>
+    <dd>{{ activity.bibliographic_description }}</dd>
+
+    <dt>{{ fields.publications_url }}</dt>
+    <dd>{{ activity.publications_url }}</dd>
+
+    <dt>{{ fields.journal_name }}</dt>
+    <dd>{{ activity.journal_name }}</dd>
+
+    <dt>{{ fields.activity_type }}</dt>
+    <dd>{{ activity.activity_type }}</dd>
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ activity.date_added }}</dd>
+</dl>
+{% endblock body %}

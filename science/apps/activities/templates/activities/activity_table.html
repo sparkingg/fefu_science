@@ -1,0 +1,30 @@
+{% extends 'common/table.html' %}
+
+{% block extra_toolbar %}
+<button class="create-activity btn btn-sm btn-primary" type="button" name="button">
+    <span data-feather="plus"></span>
+    Добавить
+</button>
+{% endblock extra_toolbar %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".create-activity").modalForm({
+            formURL: "{% url 'activities-activity-create' %}"
+        });
+
+        $(".read-activity").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".update-activity").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".delete-activity").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+    });
+</script>
+{% endblock extra_scripts %}

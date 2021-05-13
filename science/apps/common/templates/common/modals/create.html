@@ -1,0 +1,77 @@
+{% load widget_tweaks %}
+
+<form method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="modal-header">
+        {% block header %}
+        <h3 class="modal-title">
+            {% block title %}
+            {{ title }}
+            {% endblock title %}
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {% endblock header %}
+    </div>
+
+    <div class="modal-body">
+        {% block body %}
+        <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
+            {% for error in form.non_field_errors %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ error }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% for field in form %}
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+
+            {% if field.help_text %}
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{{ field.help_text }}">
+                <svg class="bi bi-question-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd" />
+                    <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                </svg>
+            </a>
+            {% endif %}
+
+            {% if field.errors or '_authors' in field.name and form.non_field_errors %}
+            {% render_field field class="form-control border-danger" %}
+            {% else %}
+            {% render_field field class="form-control" %}
+            {% endif %}
+
+            {% if field.errors %}
+            <div class="invalid">
+                {% for error in field.errors %}
+                <p class="form-text text-danger">{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% endblock body %}
+    </div>
+
+    <div class="modal-footer">
+        {% block submit %}
+        <button type="submit" class="submit-btn btn btn-primary">
+            Создать
+        </button>
+        {% endblock submit %}
+    </div>
+
+</form>
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>

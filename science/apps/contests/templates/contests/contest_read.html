@@ -1,0 +1,25 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.fond }}</dt>
+    <dd>{{ contest.fond }}</dd>
+
+    {% if contest.program %}
+    <dt>{{ fields.program }}</dt>
+    <dd>{{ contest.program }}</dd>
+    {% endif %}
+
+    <dt>{{ fields.contest }}</dt>
+    <dd>{{ contest.contest }}</dd>
+
+    <dt>{{ fields.project }}</dt>
+    <dd>{{ contest.project }}</dd>
+
+    <dt>{{ fields.manager }}</dt>
+    <dd>{{ contest.manager }}</dd>
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ contest.date_added }}</dd>
+</dl>
+{% endblock body %}

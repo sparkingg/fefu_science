@@ -1,0 +1,31 @@
+{% extends 'common/table.html' %}
+{% load render_table from django_tables2 %}
+
+{% block extra_toolbar %}
+<button class="create-grant btn btn-sm btn-primary" type="button" name="button">
+    <span data-feather="plus"></span>
+    Добавить
+</button>
+{% endblock extra_toolbar %}
+
+{% block extra_scripts %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".create-grant").modalForm({
+            formURL: "{% url 'grants-grant-create' %}"
+        });
+
+        $(".read-grant").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".update-grant").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+
+        $(".delete-grant").each(function () {
+            $(this).modalForm({ formURL: $(this).data('id') });
+        });
+    });
+</script>
+{% endblock extra_scripts %}

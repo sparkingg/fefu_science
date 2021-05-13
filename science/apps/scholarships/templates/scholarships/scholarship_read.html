@@ -1,0 +1,38 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.fond }}</dt>
+    <dd>{{ scholarship.fond }}</dd>
+
+    {% if scholarship.activity %}
+    <dt>{{ fields.activity }}</dt>
+    <dd>{{ scholarship.activity }}</dd>
+    {% endif %}
+
+    {% if scholarship.project %}
+    <dt>{{ fields.project }}</dt>
+    <dd>{{ scholarship.project }}</dd>
+    {% endif %}
+
+    {% if scholarship.time_period %}
+    <dt>{{ fields.time_period }}</dt>
+    <dd>{{ scholarship.time_period }}</dd>
+    {% endif %}
+
+    <dt>{{ fields.financing}}</dt>
+    <dd>{{ scholarship.financing }}</dd>
+
+    <dt>{{ fields.participants }}</dt>
+    <dd>{{ scholarship.participants|join:", " }}</dd>
+
+    <dt>{{ fields.support_type }}</dt>
+    <dd>{{ scholarship.support_type }}</dd>
+
+    <dt>{{ fields.scholarship_category }}</dt>
+    <dd>{{ scholarship.category }}</dd>
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ scholarship.date_added }}</dd>
+</dl>
+{% endblock body %}

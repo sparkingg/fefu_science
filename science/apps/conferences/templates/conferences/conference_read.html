@@ -1,0 +1,34 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.description }}</dt>
+    <dd>{{ conference.description }}</dd>
+
+    {% if conference.employee_authors %}
+    <dt>{{ fields.employee_authors }}</dt>
+    <dd>{{ conference.employee_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if conference.foreign_authors %}
+    <dt>{{ fields.foreign_authors }}</dt>
+    <dd>{{ conference.foreign_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if conference.postgraduate_authors %}
+    <dt>{{ fields.postgraduate_authors }}</dt>
+    <dd>{{ conference.postgraduate_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if conference.student_authors %}
+    <dt>{{ fields.student_authors }}</dt>
+    <dd>{{ conference.student_authors|join:", " }}</dd>
+    {% endif %}
+
+    <dt>{{ fields.conference_type }}</dt>
+    <dd>{{ conference.conference_type }}</dd>
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ conference.date_added }}</dd>
+</dl>
+{% endblock body %}

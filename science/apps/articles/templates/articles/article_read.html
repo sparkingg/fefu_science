@@ -1,0 +1,49 @@
+{% extends 'common/modals/read.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Read Article" %}{% endblock title %}
+
+{% block body %}
+<dl>
+    <dt>{% trans "Description" %}</dt>
+    <dd>{{ article.description }}</dd>
+
+    <dt>{% trans "Publication Type" %}</dt>
+    <dd>{{ article.publication_type }}</dd>
+
+    <dt>{% trans "Impact Factor" %}</dt>
+    <dd>{{ article.impact }}</dd>
+
+    {% if article.employee_authors %}
+    <dt>{% trans "Employee Authors" %}</dt>
+    <dd>{{ article.employee_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if article.foreign_authors %}
+    <dt>{% trans "Foreign Authors" %}</dt>
+    <dd>{{ article.foreign_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if article.postgraduate_authors %}
+    <dt>{% trans "Postgraduate Authors" %}</dt>
+    <dd>{{ article.postgraduate_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if article.student_authors %}
+    <dt>{% trans "Student Authors" %}</dt>
+    <dd>{{ article.student_authors|join:", " }}</dd>
+    {% endif %}
+
+    <dt>{% trans "Bibliographic Database" %}</dt>
+    <dd>{{ article.bibliographic_databases.all|join:", " }}</dd>
+
+    <dt>{% trans "Link to Publication" %}</dt>
+    <dd>{{ article.url|urlizetrunc:50 }}</dd>
+
+    <dt>Категория</dt>
+    <dd>{{ article.category }}</dd>
+
+    <dt>{% trans "Date Added" %}</dt>
+    <dd>{{ article.date_added }}</dd>
+</dl>
+{% endblock body %}

@@ -1,0 +1,61 @@
+{% extends 'common/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'accounts/styles/authentication.css' %}">
+{% endblock styles %}
+
+{% block scaffold %}
+<div class="form-signin">
+    <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
+        {% for error in form.non_field_errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ error }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">{% trans "Science" %}</h1>
+        </div>
+
+        <div class="form-label-group">
+            {% if form.username.errors %}
+            {% for error in form.username.errors %}
+            <input type="email" name="{{ form.username.name }}" id="{{ form.username.auto_id }}" class="form-control is-invalid" placeholder="{{ form.username.label }}" data-toggle="popover" data-content="{{ error }}" data-trigger="hover focus" required autofocus>
+            {% endfor %}
+            {% else %}
+            <input type="email" name="{{ form.username.name }}" id="{{ form.username.auto_id }}" class="form-control" placeholder="{{ form.username.label }}" required autofocus>
+            {% endif %}
+            <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+        </div>
+
+        <div class="form-label-group">
+            {% if form.password.errors %}
+            {% for error in form.password.errors %}
+            <input type="password" name="{{ form.password.name }}" id="{{ form.password.auto_id }}" class="form-control is-invalid" placeholder="{{ form.password.label }}" data-toggle="popover" data-content="{{ error }}" data-trigger="hover focus" required>
+            {% endfor %}
+            {% else %}
+            <input type="password" name="{{ form.password.name }}" id="{{ form.password.auto_id }}" class="form-control" placeholder="{{ form.password.label }}" required>
+            {% endif %}
+            <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-block">{% trans "Log In" %}</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+{% endblock scripts %}

@@ -1,0 +1,37 @@
+{% extends 'common/modals/read.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Read Publication" %}{% endblock title %}
+
+{% block body %}
+<dl>
+    <dt>{% trans "Description" %}</dt>
+    <dd>{{ publication.description }}</dd>
+
+    <dt>{% trans "Field of Study" %}</dt>
+    <dd>{{ publication.field_of_study }}</dd>
+
+    {% if publication.employee_authors %}
+    <dt>{% trans "Employee Authors" %}</dt>
+    <dd>{{ publication.employee_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if publication.foreign_authors %}
+    <dt>{% trans "Foreign Authors" %}</dt>
+    <dd>{{ publication.foreign_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if publication.postgraduate_authors %}
+    <dt>{% trans "Postgraduate Authors" %}</dt>
+    <dd>{{ publication.postgraduate_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if publication.student_authors %}
+    <dt>{% trans "Student Authors" %}</dt>
+    <dd>{{ publication.student_authors|join:", " }}</dd>
+    {% endif %}
+
+    <dt>{% trans "Date Added" %}</dt>
+    <dd>{{ publication.date_added }}</dd>
+</dl>
+{% endblock body %}

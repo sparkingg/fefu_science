@@ -1,0 +1,38 @@
+{% extends 'common/modals/read.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Read Research" %}{% endblock title %}
+
+{% block body %}
+<dl>
+    <dt>{% trans "Name" %}</dt>
+    <dd>{{ research.name }}</dd>
+
+    <dt>{% trans "University Priority" %}</dt>
+    <dd>{{ research.university_priority }}</dd>
+
+    <dt>{% trans "Scientific Priority" %}</dt>
+    <dd>{{ research.scientific_priority }}</dd>
+
+    <dt>{% trans "Critical Technology" %}</dt>
+    <dd>{{ research.critical_technology }}</dd>
+
+    <dt>{% trans "Economic Priority" %}</dt>
+    <dd>{{ research.economic_priority }}</dd>
+
+    <dt>{% trans "Strategic Direction" %}</dt>
+    <dd>{{ research.strategic_direction }}</dd>
+
+    <dt>{% trans "Category" %}</dt>
+    <dd>{{ research.category }}</dd>
+
+    <dt>{% trans "Academic Advisor" %}</dt>
+    <dd>{{ research.academic_advisor }}</dd>
+
+    <dt>{% trans "Reason" %}</dt>
+    <dd>{{ research.reasons }}</dd>
+
+    <dt>{% trans "Date Added" %}</dt>
+    <dd>{{ research.date_added }}</dd>
+</dl>
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.fond }}</dt>
+    <dd>{{ grant.fond }}</dd>
+
+    <dt>{{ fields.contest }}</dt>
+    <dd>{{ grant.contest }}</dd>
+
+    <dt>{{ fields.project }}</dt>
+    <dd>{{ grant.project }}</dd>
+
+    <dt>{{ fields.time_period }}</dt>
+    <dd>{{ grant.time_period }}</dd>
+
+    <dt>{{ fields.manager }}</dt>
+    <dd>{{ grant.manager }}</dd>
+
+    <dt>{{ fields.participants }}</dt>
+    <dd>{{ grant.participants|join:", " }}</dd>
+
+    <dt>{{ fields.postgraduates_number_payed }}</dt>
+    <dd>{{ grant.postgraduates_number_payed }}</dd>
+
+    <dt>{{ fields.postgraduates_number }}</dt>
+    <dd>{{ grant.postgraduates_number }}</dd>
+
+    <dt>{{ fields.students_number_payed }}</dt>
+    <dd>{{ grant.students_number_payed }}</dd>
+
+    <dt>{{ fields.students_number }}</dt>
+    <dd>{{ grant.students_number }}</dd>
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ grant.date_added }}</dd>
+</dl>
+{% endblock body %}

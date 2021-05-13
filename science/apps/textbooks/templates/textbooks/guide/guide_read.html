@@ -1,0 +1,61 @@
+{% extends 'common/modals/read.html' %}
+
+{% block body %}
+<dl>
+    <dt>{{ fields.description }}</dt>
+    <dd>{{ guide.description }}</dd>
+
+    {% if guide.publisher %}
+    <dt>{{ fields.publisher }}</dt>
+    <dd>{{ guide.publisher }}</dd>
+    {% endif %}
+
+    {% if guide.circulation %}
+    <dt>{{ fields.circulation }}</dt>
+    <dd>{{ guide.circulation }}</dd>
+    {% endif %}
+
+    {% if guide.isbn %}
+    <dt>{{ fields.isbn }}</dt>
+    <dd>{{ guide.isbn }}</dd>
+    {% endif %}
+
+    {% if guide.field_of_study %}
+    <dt>{{ fields.field_of_study }}</dt>
+    <dd>{{ guide.field_of_study }}</dd>
+    {% endif %}
+
+    {% if guide.volume %}
+    <dt>{{ fields.volume }}</dt>
+    <dd>{{ guide.volume }}</dd>
+    {% endif %}
+
+    {% if guide.volume_employees %}
+    <dt>{{ fields.volume_employees }}</dt>
+    <dd>{{ guide.volume_employees }}</dd>
+    {% endif %}
+
+    {% if guide.employee_authors %}
+    <dt>{{ fields.employee_authors }}</dt>
+    <dd>{{ guide.employee_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if guide.foreign_authors %}
+    <dt>{{ fields.foreign_authors }}</dt>
+    <dd>{{ guide.foreign_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if guide.postgraduate_authors %}
+    <dt>{{ fields.postgraduate_authors }}</dt>
+    <dd>{{ guide.postgraduate_authors|join:", " }}</dd>
+    {% endif %}
+
+    {% if guide.student_authors %}
+    <dt>{{ fields.student_authors }}</dt>
+    <dd>{{ guide.student_authors|join:", " }}</dd>
+    {% endif %}
+
+    <dt>{{ fields.date_added }}</dt>
+    <dd>{{ guide.date_added }}</dd>
+</dl>
+{% endblock body %}
